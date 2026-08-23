@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Playwright generated output
+playwright-report/
+test-results/
+.features-gen/
+
+# Build output
+dist/
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.qa
+.env.uat
+.env.prod
+
+# Reports and screenshots
+reports/
+Screenshots/
+screenshots/
+videos/
+
+# AI Reports
+ai-reports/
+latest-failure.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code local settings
+.vscode/settings.json
+
+# Temporary files
+*.tmp
+*.temp

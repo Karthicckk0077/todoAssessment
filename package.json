@@ -1,0 +1,38 @@
+{
+  "name": "bekaert-playwright-bdd-ai-framework",
+  "version": "1.0.0",
+  "description": "Enterprise-level Playwright BDD AI-ready automation framework",
+  "main": "index.js",
+  "scripts": {
+    "bdd:gen": "bddgen",
+    "test": "npm run bdd:gen && npx playwright test",
+    "test:headed": "npm run bdd:gen && npx playwright test --headed",
+    "test:smoke": "npm run bdd:gen && npx playwright test --grep @smoke --grep-invert @blocked",
+    "test:regression": "npm run bdd:gen && npx playwright test --grep @regression --grep-invert @blocked",
+    "test:ecommerce": "npm run bdd:gen && npx playwright test --grep @ecommerce --grep-invert @blocked",
+    "test:blocked": "npm run bdd:gen && npx playwright test --grep @blocked",
+    "test:debug": "npm run bdd:gen && npx playwright test --debug",
+    "report": "npx playwright show-report",
+    "clean:reports": "rimraf playwright-report test-results .features-gen reports"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "bdd",
+    "automation",
+    "ai",
+    "mcp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "dotenv": "^17.4.2",
+    "playwright-bdd": "^9.2.0",
+    "rimraf": "^6.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
+}
