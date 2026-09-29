@@ -4,6 +4,7 @@ import { HeaderComponent } from '../components/HeaderComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { BigBasketHomePage } from '../pages/BigBasketHomePage';
 import { AutomationExerciseHomePage } from '../pages/AutomationExerciseHomePage';
+import { TodoPage } from '../pages/todoPage';
 import { AiFailureAnalyzer } from '../utils/aiFailureAnalyzer';
 import { ScreenshotUtil } from '../utils/screenshotUtil';
 
@@ -13,6 +14,7 @@ type PageObjects = {
   footerComponent: FooterComponent;
   bigBasketHomePage: BigBasketHomePage;
   automationExerciseHomePage: AutomationExerciseHomePage;
+  todoPage : TodoPage;
 };
 
 export const test = base.extend<PageObjects>({
@@ -63,6 +65,13 @@ export const test = base.extend<PageObjects>({
       new AutomationExerciseHomePage(page);
 
     await use(automationExerciseHomePage);
+  },
+
+  todoPage: async ({ page }, use) => {
+    const todoPage =
+      new TodoPage(page);
+
+    await use(todoPage);
   }
 });
 
